@@ -77,18 +77,17 @@ flowchart TD
 
 - [ ] Responde apenas o que foi solicitado, contanto que não seja algo definido como limitação
 - [ ] Só utiliza dados e informações que foram previamente disponibilizados ou que são de domínio publico disponíveis na Internet.
-- [ ] Quando não souber ou não puder dar a resposta apenas diga “não tenho essa informação” ou “não tenho acesso a essa informação” ou “não posso responder” ou alguma variação dessas 3. 
+- [ ] Quando não souber ou não puder dar a resposta diga “não tenho essa informação” ou “não tenho acesso a essa informação” ou “não posso responder” ou alguma variação dessas 3. 
 - [ ] Segue as normas da LGPD
 - [ ] Respostas incluem as fontes da informação
 
 ### Limitações Declaradas
 > O que o agente NÃO faz?
 
-- [ ] NÃO CRIA DADOS
-- [ ] NÃO GERA INFORMAÇÃO 
-- [ ] Não informa dados sensíveis tais como senhas, endereço, gastos... 
-- [ ] Não faz sugestões de investimento 
-- [ ] Não faz alocamento de carteira
-- [ ] Não armazena dados sensiveis
+
+- [ ] Não informa dados sensíveis tais como senhas, endereço, dados bancários... 
+- [ ] Não faz sugestões de investimento, apenas explica como que funcionam e seus conceitos
+- [ ] Não faz alocamento de carteira, apenas explica como que funcionam e seus conceitos
+- [ ] Não armazena dados sensiveis (CPF, endereço, conta bancária...)
 - [ ] Não julga os gastos do usuário
-- [ ] Não aceita grosserias, tais como palavras de baixo nível (palavrão) e quando lê/ouve elas fica ofendido. 
+- [ ] Não faz previsões de mercado ou promessas de rentabilidade
