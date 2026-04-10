@@ -28,13 +28,34 @@ Não, trabalhei com eles do jeito que estavam.
 > Descreva como seu agente acessa a base de conhecimento.
 Pensei muito na possibilidade de colocar direto no prompt, mas ele vai ficar gigantesco. 
 Melhor gerar via código, 
-[ex: Os JSON/CSV são carregados no início da sessão e incluídos no contexto do prompt]
+
+```python
+import pandas as pd
+import json
+
+#CSVs
+historico = pd.read_csv('data/historico_atendimento.csv')
+transações = pd.read_csv('data/transacoes.csv')
+
+# JSONs
+with open ('data/perfil_investidor.json', 'r', econding'uft-8') as f:
+perfil = json.load(f)
+
+with open ('data/produtos_financeiros.json', 'r', econding'uft-8') as f:
+produtos = json.load(f)
+
+```
+
 
 ### Como os dados são usados no prompt?
 > Os dados vão no system prompt? São consultados dinamicamente?
 
+Decidi por seguir o exemplo da aula nesse caso. 
+Lembrando que podemos simplesmente "injetar" os dados em nosso prompt para que o agente tenha o melhor contexto possível ou carregar dinamicamente para que possamos ganhar mais flexibilidade.
+A base de dados utilizada é uma base pequena, então tanto faz, mas se fosse algo maior seria mais interessante a segunda opção. 
+
 ```
-DADOS DO CLIENTE (perfil_investidor.json):
+DADOS DO CLIENTE (data/perfil_investidor.json):
 {
   "nome": "João Silva",
   "idade": 32,
@@ -59,7 +80,7 @@ DADOS DO CLIENTE (perfil_investidor.json):
   ]
 }
 
-PRODUTOS FINANCEIROS (produtos_financeiros.json)
+PRODUTOS FINANCEIROS (data/produtos_financeiros.json)
 [
   {
     "nome": "Tesouro Selic",
@@ -103,7 +124,7 @@ PRODUTOS FINANCEIROS (produtos_financeiros.json)
   }
 ]
 
-HISTÓRICO (historico_atendimento.csv):
+HISTÓRICO (data/historico_atendimento.csv):
 data,canal,tema,resumo,resolvido
 2025-09-15,chat,CDB,Cliente perguntou sobre rentabilidade e prazos,sim
 2025-09-22,telefone,Problema no app,Erro ao visualizar extrato foi corrigido,sim
@@ -111,7 +132,7 @@ data,canal,tema,resumo,resolvido
 2025-10-12,chat,Metas financeiras,Cliente acompanhou o progresso da reserva de emergência,sim
 2025-10-25,email,Atualização cadastral,Cliente atualizou e-mail e telefone,sim
 
-TRANSAÇÕES (transacoes.csv):
+TRANSAÇÕES (data/transacoes.csv):
 data,descricao,categoria,valor,tipo
 2025-10-01,Salário,receita,5000.00,entrada
 2025-10-02,Aluguel,moradia,1200.00,saida
@@ -132,14 +153,33 @@ data,descricao,categoria,valor,tipo
 
 > Mostre um exemplo de como os dados são formatados para o agente.
 
+A ideia é usar os dados originais da base de conhecimento na hora de gerar as respostas, mas aprensentar apenas as informações mais relevantes para o usuário dentro do contexto a ser analisado. 
 ```
 Dados do Cliente:
 - Nome: João Silva
 - Perfil: Moderado
 - Saldo disponível: R$ 5.000
+- Objetivo: Construir reserva de emergência
+- Reserva atual: R$ 10.0000 (meta: R$15.000)
+
+Resumo de gastos:
+- Transporte: R$ 295
+- Saúde: R$ 188
+- Moradia: R$ 1.380
+- Lazer: R$ 55,90
+- Alimentação: R$ 570
+- TOTAL DE SAÍDAS: R$ 2.488,90
 
 Últimas transações:
 - 01/11: Supermercado - R$ 450
 - 03/11: Streaming - R$ 55
 ...
+
+Produtos disponíveis para explicar:
+- Tesouro Selic (risco baixo)
+- CDB Liquidez Diária (risco baixo)
+- LCI/LCA (risco baixo)
+- Fundo de Ações (risco alto)
+- Fundo Multimercado (risco medio)
+
 ```
