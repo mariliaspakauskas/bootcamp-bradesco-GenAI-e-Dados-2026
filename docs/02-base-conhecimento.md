@@ -18,7 +18,7 @@ Descreva se usou os arquivos da pasta `data`, por exemplo:
 
 > Você modificou ou expandiu os dados mockados? Descreva aqui.
 
-Não, trabalhei com eles do jeito que estavam. 
+Trabalhei com eles do jeito que estavam. 
 
 ---
 
