@@ -30,19 +30,10 @@ Pensei muito na possibilidade de colocar direto no prompt, mas ele vai ficar gig
 Melhor gerar via código, 
 
 ```python
-import pandas as pd
-import json
-
-#CSVs
-historico = pd.read_csv('data/historico_atendimento.csv')
-transações = pd.read_csv('data/transacoes.csv')
-
-# JSONs
-with open ('data/perfil_investidor.json', 'r', econding'uft-8') as f:
-perfil = json.load(f)
-
-with open ('data/produtos_financeiros.json', 'r', econding'uft-8') as f:
-produtos = json.load(f)
+perfil = json.load(open('./data/perfil_investidor.json'))
+historico = pd.read_csv('./data/historico_atendimento.csv')
+transacoes = pd.read_csv('./data/transacoes.csv')
+produtos = json.load(open('./data/produtos_financeiros.json'))
 
 ```
 
