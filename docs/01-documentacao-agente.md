@@ -64,10 +64,10 @@ flowchart TD
 
 | Componente | Descrição |
 |------------|-----------|
-| Interface | [ex: Chatbot em Streamlit] |
-| LLM | [ex: GPT-4 via API] |
-| Base de Conhecimento | [ex: JSON/CSV com dados do cliente] |
-| Validação | [ex: Checagem de alucinações] |
+| Interface | Streamlit (Front-end do Chat) |
+| LLM | gpt-oss:20b (Rodando localmente via Ollama) |
+| Base de Conhecimento | JSON/CSV (Contexto do Perfil e Histórico) |
+| Validação | System Prompt (As regras que ditam o que o FIN pode ou não dizer) |
 
 ---
 
