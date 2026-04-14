@@ -1,29 +1,64 @@
-# 🤖 Agente Financeiro Inteligente com IA Generativa
+# 🚀 Bootcamp Bradesco: GenAI e Dados 2026
 
-## Contexto
-
-Os assistentes virtuais no setor financeiro estão evoluindo de simples chatbots reativos para **agentes inteligentes e proativos**. Neste desafio, você vai idealizar e prototipar um agente financeiro que utiliza IA Generativa para:
-
-- **Antecipar necessidades** ao invés de apenas responder perguntas
-- **Personalizar** sugestões com base no contexto de cada cliente
-- **Cocriar soluções** financeiras de forma consultiva
-- **Garantir segurança** e confiabilidade nas respostas (anti-alucinação)
+Repositório dedicado ao desenvolvimento de soluções em Inteligência Artificial Generativa e Análise de Dados, integrando lógica de programação, engenharia de dados e modelos de linguagem aplicados ao setor financeiro.
 
 ---
 
-## Sobre o projeto:
+## 🤖 Projeto Principal: **FIN** (Assistente Inteligente)
 
-Criei o FIN para que ele seja um professor de investimentos e finanças. 
-Segui as diretrizes conforme proposto nesse desafio
+O **FIN** é um chatbot financeiro desenvolvido para oferecer suporte inteligente e processamento de consultas de forma eficiente. Este projeto destaca-se por uma infraestrutura **Local-First**, priorizando a privacidade e o controle dos dados.
 
-1. **Prompt:** Minha ideia foi criar um prompt robusto, com informações relevantes e exemplos de resposta. 
-2. **Dados mockados:** Utilizei os dados oferecidos pela própria DIO
-3. **Segurança:** Para evitar alucinações criei regras restringindo o campo de atuação do agente.
-4. **Teste cenários reais:** Foram realizadas perguntas e as respostas do agente foram dentro do esperado. Dentro da pasta `assets` tem alguns exemplos de perguntas e respostas.
+### 🛠️ Diferenciais Técnicos
+* **LLM Local:** Implementação baseada no modelo **gpt-oss:20b** rodando via **Ollama**.
+* **Interface Customizada:** Interface desenvolvida em **Streamlit**, focada em uma experiência de usuário (UX) limpa, com branding personalizado: *"dúvidas? Chama o FIN"*.
+* **Lógica de Negócio:** Algoritmos em Python para tratamento de transações (débitos, créditos e saldos) integrados ao fluxo da IA.
+
+### 🏗️ Arquitetura e Tecnologias
+* **Linguagem:** Python 3.10+
+* **Interface:** Streamlit
+* **Orquestração de IA:** Ollama
+* **Modelo:** gpt-oss:20b
+* **Dados:** SQL para estruturação de base de dados financeira.
+
+### 💻 Como Executar o FIN Localmente
+
+1. **Prepare o ambiente Ollama:**
+   ```bash
+   ollama run gpt-oss:20b
+   ```
+
+2. **Instale as dependências necessárias:**
+   ```bash
+   pip install streamlit
+   ```
+
+3. **Inicie a aplicação:**
+   ```bash
+   streamlit run app.py
+   ```
+
+---
+
+## 📈 Conteúdo do Bootcamp
+
+Além do desenvolvimento do FIN, este repositório contém a evolução técnica dividida em:
+
+### 🐍 Python para Dados
+* Desafios de lógica com manipulação de listas e dicionários.
+* Tratamento de strings e limpeza de dados bancários.
+* Uso de *list comprehensions* para filtragem eficiente de ativos.
+
+### 🗄️ SQL & Estruturação
+* Queries para criação e gerenciamento de tabelas de clientes e transações.
+* Exercícios de transição de planilhas para bancos de dados relacionais.
+
+### 🧠 Engenharia de Prompts
+* Estruturação de prompts para geração de relatórios e análise de sentimentos no mercado financeiro.
 
 
-Fico a disposição caso queiram tirar dúvidas ou dar algum feedback. 
-<br>Minhas redes sociais são:
+---
+
+<br> **Follow**
 - [Linkedin](https://www.linkedin.com/in/mapinho/ )
 - [Instagram](https://www.instagram.com/eumapinho/)
 
