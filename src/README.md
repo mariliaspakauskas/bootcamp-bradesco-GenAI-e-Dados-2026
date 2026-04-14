@@ -42,6 +42,19 @@ pip instal streamlit pandas request
 `python -m streamlit run ./src/app.py`
 ```
 
+---
+
+## Evidência de execução:
+
+### 1. Interface:
+<img width="1906" height="1025" alt="image" src="https://github.com/user-attachments/assets/cbdf8aaa-f267-4021-b5e3-674170cd3f26" />
+
+### 2. Q&A :
+
+<img width="1920" height="1032" alt="image" src="https://github.com/user-attachments/assets/b3aa7dcb-d2c3-4f0f-b5ca-12d6f5a674e0" />
+
+<img width="1920" height="1032" alt="image" src="https://github.com/user-attachments/assets/0a9d95fd-159e-4bc6-ab1f-b9fc0bb631d6" />
+
 
 
 
