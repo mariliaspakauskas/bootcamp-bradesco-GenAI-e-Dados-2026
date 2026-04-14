@@ -55,6 +55,9 @@ Além do desenvolvimento do FIN, este repositório contém a evolução técnica
 ### 🧠 Engenharia de Prompts
 * Estruturação de prompts para geração de relatórios e análise de sentimentos no mercado financeiro.
 
+---
+
+[![Assistir vídeo](https://img.youtube.com/vi/-qcIT8Jp_OU/maxresdefault.jpg)](https://www.youtube.com/watch?v=-qcIT8Jp_OU)
 
 ---
 
