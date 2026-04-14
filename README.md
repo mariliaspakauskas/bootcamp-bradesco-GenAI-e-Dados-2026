@@ -23,9 +23,9 @@ Segui as diretrizes conforme proposto nesse desafio
 
 
 Fico a disposição caso queiram tirar dúvidas ou dar algum feedback. 
-Minhas redes sociais são:
-[Linkedin](https://www.linkedin.com/in/mapinho/ )
-[Instagram](https://www.instagram.com/eumapinho/)
+<br>Minhas redes sociais são:
+- [Linkedin](https://www.linkedin.com/in/mapinho/ )
+- [Instagram](https://www.instagram.com/eumapinho/)
 
 
 
